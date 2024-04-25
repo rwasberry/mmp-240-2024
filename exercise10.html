@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Vertical Dropdown Menu with Hover</title>
+    <style>
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        
+        .main-menu {
+            width: 200px; 
+        }
+
+        .main-menu > li {
+            position: relative; 
+        }
+
+        .main-menu a {
+            display: block; 
+            padding: 10px;
+            text-decoration: none; 
+            background-color: #333; 
+            color: white; 
+            border-bottom: 1px solid #444; 
+        }
+
+        .main-menu a:hover {
+            background-color: #444; 
+        }
+
+        
+        .main-menu .arrow {
+            float: right; 
+            font-size: 0.8em; 
+        }
+
+        
+        .main-menu ul {
+            display: none; 
+            position: absolute; 
+            top: 0; 
+            left: 100%; 
+            background-color: #444; 
+            border: 1px solid #555; 
+        }
+
+        .main-menu ul a {
+            padding: 10px; 
+            background-color: #555; 
+        }
+
+        .main-menu ul a:hover {
+            background-color: #666; 
+        }
+
+        
+        .main-menu > li:hover > ul {
+            display: block; 
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="main-menu">
+        <li>
+            <a href="#">Home <span class="arrow">▼</span></a>
+        </li>
+        <li>
+            <a href="#">Services <span class="arrow">▼</span></a>
+            <ul>
+                <li><a href="#">Consulting</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">About <span class="arrow">▼</span></a>
+            <ul>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Contact <span class="arrow">▼</span></a>
+            <ul>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Phone</a></li>
+                <li><a href="#">Address</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
