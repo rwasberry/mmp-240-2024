@@ -3,49 +3,66 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Exercise 8</title>
-
     <style>
-    /* Add CSS code here */
+      /* Base styles for the menu */
+      ul {
+        padding: 0; /* Resetting ul defaults padding */
+        margin: 0;  /* Resetting ul defaults margin */
+      }
 
-    ul{              /* resetting ul defaults padding and margins */
-      padding:0;
-      margin:0;
-    }
+      #wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: sans-serif;
+      }
 
-    #wrapper{
-      max-width:1200px;
-      margin:0 auto;
-      font-family: sans-serif;
-    }
-    nav{
-      background-color: #008387;
-      padding: 1em;
-    }
-    nav li {
-      display: inline;
-      padding:0 2em;
-      border-right: solid 1px #fff;
-    }
+      nav {
+        background-color: #008387;
+        padding: 1em; /* Padding for the menu */
+      }
 
-    nav li:last-child{
-      border:none;
-    }
+      nav li {
+        display: inline; /* Horizontal layout by default */
+        padding: 0 2em; /* Horizontal padding */
+        border-right: solid 1px #fff; /* Border between items */
+      }
 
-    nav li a{
-      text-decoration: none;
-      color: #fff;
-    }
+      nav li:last-child {
+        border-right: none; /* Remove border from the last item */
+      }
 
-    nav li a:hover{
-      text-decoration: underline;
-    }
+      nav li a {
+        text-decoration: none; /* Remove underline from links */
+        color: #fff;           /* White text */
+      }
 
+      nav li a:hover {
+        text-decoration: underline; /* Underline on hover */
+      }
 
+      /* Media query for smaller screens (max-width: 768px) */
+      @media (max-width: 768px) {
+        /* Change the menu to vertical layout */
+        nav li {
+          display: block;           /* Vertical layout */
+          border-right: none;       /* Remove right border */
+          border-bottom: solid 1px #fff; /* Add bottom border */
+          padding: 1em 0;           /* Add vertical padding for spacing */
+        }
+
+        /* Remove nav padding to let borders extend to the edges */
+        nav {
+          padding: 0;
+        }
+
+        /* Adjust the last menu item's border for a clean edge */
+        nav li:last-child {
+          border-bottom: none; /* No bottom border for the last item */
+        }
+      }
 
     </style>
-
   </head>
   <body>
     <div id="wrapper">
